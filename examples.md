@@ -12,7 +12,7 @@ const nuevoElemento = {
 
 fetch(firebaseUrl, {
   method: 'POST',
-  body: JSON.stringify(nuevoElemento)dw
+  body: JSON.stringify(nuevoElemento)
 })
 .then(response => response.json())
 .then(data => console.log('Elemento creado:', data))
@@ -22,5 +22,10 @@ fetch(firebaseUrl, {
 # Read
 
 ```javascript
+const firebaseUrl = 'https://tu-app.firebaseio.com/tu-coleccion.json';
 
+fetch(firebaseUrl)
+.then(response => response.json())
+.then(data => console.log('Datos:', data))
+.catch(error => console.error('Error al obtener datos:', error));
 ```
